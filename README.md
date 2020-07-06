@@ -1,2 +1,2 @@
 # OPEN_FPE_IFT
-This package extracts the stochastic equations describing the scale-dependent cascade process in turbulent flows through Fokker-Planck equations and concepts of non-equilibrium stochastic thermodynamics.
+This package extracts the stochastic equations describing the scale-dependent cascade process in turbulent flows through Fokker-Planck equations and concepts of non-equilibrium stochastic thermodynamics. This interdisciplinary treatment of the turbulent cascade process has the potential for a new way to link the statistical description of turbulence (via common two-point increment statistics), non-equilibrium stochastic thermodynamics and local turbulent flow structures.	
