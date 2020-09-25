@@ -28,7 +28,7 @@ The software was implemented in MATLAB 2020a, but it has also been tested on MAT
 Example analyses of the dataset: "Renner_8000_Hz.mat" can be found on peer-reviewed paper on OPEN_FPE_IFT.
 
 ### License
-This program is distributed under the 
+This program is distributed under the terms of the Creative Commons Attribution 4.0 International License (CC-BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited. See http://creativecommons.org/licenses/by/4.0/.
 
 ### In case of difficulties
 Please post an issue on the GitHub repository.
