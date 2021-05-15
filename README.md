@@ -2,19 +2,20 @@
 This is a user-friendly open-source Matlab package developed by the research group Turbulence, Wind energy and Stochastics (TWiSt) at the Carl von Ossietzky University of Oldenburg (https://uol.de/en/physics/twist). This package enables to perform a standard analysis of given turbulent data and extracts the stochastic equations describing the scale-dependent cascade process in turbulent flows through Fokker-Planck equations. As the analysis of the scale-dependent cascade process through a hierarchy of spatial and temporal scales in turbulent flows is an integral part of turbulence theory, this interdisciplinary treatment of the turbulent cascade process has the potential for a new way to link the statistical description of turbulence (via common two-point increment statistics), non-equilibrium stochastic thermodynamics and local turbulent flow structures. The presented package can be used also for the analysis of other data with turbulent like complexity.
 
 ## Peer-reviewed paper on OPEN_FPE_IFT:
-Journal of Open Research Software (under review)
+Submitted to Journal of Statistical Software
 
 ## Standalone application (no MATLAB license needed) 
-Standalone applications (64-bit) for Windows®, Linux®, and macOS are also created to run the Matlab code on target machines that do not have MATLAB installed.
-When running the standalone applications, MATLAB Runtime 2020a is installed automatically. If a problem occurs during the installation of MATLAB Runtime 2020a, see: https://www.mathworks.com/help/compiler/install-the-matlab-runtime.html
+To enhance the accessibility, standalone applications (64- bit) for Windows, macOS and Linux are also created to run the MATLAB code on target machines that do not have a MATLAB license. When running the standalone applications, MATLAB Runtime 2020a is installed automatically. If a problem occurs during the installation of MATLAB Runtime 2020a, see: https://www.mathworks.com/help/compiler/install-the-matlab-runtime.html
 
 ## Getting Started (MATLAB license needed)
-The software was implemented in MATLAB 2020a, but it has also been tested on MATLAB 2017b. Before using this script the following toolboxes should be included in your MATLAB license.
+The software is implemented in MATLAB 2020a. Before using this script the following toolboxes should be included in your MATLAB license.
 1. Curve Fitting Toolbox
 2. Optimization Toolbox
 3. Parallel Computing Toolbox
 4. Signal Processing Toolbox
 5. Statistics and Machine Learning Toolbox  
+As these MATLAB toolboxes are essential for the application of the package, the compatibility
+to Octave can not be provided. 
 
 ### Installation  
 1. Download the Zip archive and unzip it into an appropriate directory
@@ -31,7 +32,7 @@ This package can be also directly downloaded from the Matlab File Exchange:
 Example analyses of the dataset: "Renner_8000_Hz.mat" can be found on peer-reviewed paper on OPEN_FPE_IFT.
 
 ### License
-This program is distributed under the terms of the Creative Commons Attribution 4.0 International License (CC-BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited. See http://creativecommons.org/licenses/by/4.0/.
+This open source MATLAB package is available as free software, under the GNU General Public License (GPL) version 3, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited. See http://creativecommons.org/licenses/by/3.0/.
 
 ### In case of difficulties
 Please post an issue on the GitHub repository.
