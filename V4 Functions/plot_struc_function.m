@@ -368,7 +368,7 @@ axis square
 set(gcf, 'Color', 'w')
 set(gca,'FontSize',fontsize)
 xlabel('$log(T^3)$', 'interpreter','latex')
-legend('$log(T^5)$','$log(T^6)$','Interpreter','latex','Location','northwest','FontSize',18)  
+legend('$log(T^5)$','$log(T^7)$','Interpreter','latex','Location','northwest','FontSize',18)  
 
 
 
