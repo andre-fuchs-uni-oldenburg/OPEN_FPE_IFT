@@ -248,7 +248,7 @@ plot(yyy,...
     ub(t*1+1:(t*1+1)+t-1),'LineWidth',2,'LineStyle','--')
 axis square
 % ylabel('$d_{d20}(r)$', 'interpreter','latex')
-ylabel('$d_{d20}$', 'interpreter','latex')
+ylabel('$d_{20}$', 'interpreter','latex')
     if norm_r==1
     xlabel('$r / \lambda$', 'interpreter','latex')
     else
@@ -270,7 +270,7 @@ plot(yyy,...
     ub(t*2+1:(t*2+1)+t-1),'LineWidth',2,'LineStyle','--')
 axis square
 % ylabel('$d_{d21}(r)$', 'interpreter','latex')
-ylabel('$d_{d21}$', 'interpreter','latex')
+ylabel('$d_{21}$', 'interpreter','latex')
     if norm_r==1
     xlabel('$r / \lambda$', 'interpreter','latex')
     else
@@ -292,7 +292,7 @@ plot(yyy,...
     ub(t*3+1:(t*3+1)+t-1),'LineWidth',2,'LineStyle','--')
 axis square
 % ylabel('$d_{d22}(r)$', 'interpreter','latex')
-ylabel('$d_{d22}$', 'interpreter','latex')
+ylabel('$d_{22}$', 'interpreter','latex')
     if norm_r==1
     xlabel('$r / \lambda$', 'interpreter','latex')
     else
@@ -338,7 +338,7 @@ plot(yyy,...
 plot(yyy,...
     ub(t*1+1:(t*1+1)+t-1),'LineWidth',2,'LineStyle','--')
 axis square
-ylabel('$d_{d20}$', 'interpreter','latex')
+ylabel('$d_{20}$', 'interpreter','latex')
     if norm_r==1
     xlabel('$r / \lambda$', 'interpreter','latex')
     else
@@ -359,7 +359,7 @@ plot(yyy,...
 plot(yyy,...
     ub(t*2+1:(t*2+1)+t-1),'LineWidth',2,'LineStyle','--')
 axis square
-ylabel('$d_{d21}$', 'interpreter','latex')
+ylabel('$d_{21}$', 'interpreter','latex')
     if norm_r==1
     xlabel('$r / \lambda$', 'interpreter','latex')
     else
@@ -380,7 +380,7 @@ plot(yyy,...
 plot(yyy,...
     ub(t*3+1:(t*3+1)+t-1),'LineWidth',2,'LineStyle','--')
 axis square
-ylabel('$d_{d22}$', 'interpreter','latex')
+ylabel('$d_{22}$', 'interpreter','latex')
     if norm_r==1
     xlabel('$r / \lambda$', 'interpreter','latex')
     else
