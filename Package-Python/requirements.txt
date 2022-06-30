@@ -1,0 +1,5 @@
+matplotlib
+numpy
+requests
+h5py
+scipy
