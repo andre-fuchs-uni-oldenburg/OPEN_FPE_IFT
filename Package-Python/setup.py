@@ -3,11 +3,12 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+
 setuptools.setup(
     name="turbtools",
-    version="22.6a3",
-    description="Python Package for Statistical Analysis of Turbulence Data",
-    author="Lille Turbulence Program 2022",
+    version="22.8a2",
+    description="An Open Source Package for Basic and Advanced Statistical Analysis of Turbulence Data and Other Complex Systems",
+    author="Turbulence, Wind energy and Stochastics Group",
     maintainer = "Aakash Patil",
     license="GPL",
     long_description=long_description,

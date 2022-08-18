@@ -1,0 +1,19 @@
+#How much %% of data do you want to use for the analysis?
+data_use = 0.5; #0.5 is 50%
+
+#Sampling frequency in Hz:
+fsamp = 
+
+#the kinematic viscosity in m^2/s
+kin_vis = 15.32e-6 
+
+#Number of Bins used
+increment_bin = 
+
+#fill missing nans with 
+fillmissingMethod = 'linear'
+
+#plot figures
+plot_ext = '.png'
+plot_dpi = 720
+plot_size = (8,6)

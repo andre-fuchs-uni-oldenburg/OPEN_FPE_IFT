@@ -37,20 +37,21 @@ Describe stats and plot the raw signal
 $ turbtools plot_signal
 ```
 
-Describe stats and plot the raw signal
+Plot stats stationarity
 ```console
-$ turbtools plot_signal
+$ turbtools plot_stationarity
 ```
 
-Describe stats and plot the raw signal
+Plot probability density function
 ```console
-$ turbtools plot_signal
+$ turbtools plot_pdf
 ```
 
-## To Do List:
-init wrong 
-requirements exqct from sys
-Automate pushing
+Plot turbulent energy spectrum
+```console
+$ turbtools plot_spectrum
+```
+
  
 ## Issues:
 Problems? Please raise an issue at [https://github.com/aakash30jan/turbtools/issues](https://github.com/aakash30jan/turbtools/issues).
