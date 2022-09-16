@@ -25,6 +25,10 @@
 % tol_opti = Optimization: Tolerance of the range of Kramers-Moyal coefficients in % 
 %            It is the percentage(For Ex: 0.1 for 10 percent or 0.2 for 20 percent)of D1 or D2 
 %            within these limit which you want to optimize these coeffcients D1 & D2
+% norm_ur = normalization of the data using $\sigma_\infty$? data 1=Yes, 0=No
+% norm_r = normalization of the scale using $\lambda$? data 1=Yes, 0=No
+% save_path = path for saving figures and files
+% save_name = name for saving files
 %
 % Arguments OUT
 % evaluated = a modified/updated struct 'evaluated' array with optimized value of D1 & D2 

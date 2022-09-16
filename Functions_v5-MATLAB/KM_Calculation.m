@@ -24,9 +24,11 @@
 % m_data = mean of the data
 % multi_point = Multipoint condition 1=YES or 2=NO
 % condition = This input is for multipoint statistics
+% norm_r = normalization of the scale using $\lambda$? data 1=Yes, 0=No
 %
 % Arguments OUT
 % evaluated = a modified/updated struct 'evaluated' array
+% Enclosed in a "evaluated":
 % r is the scale in meters at which moments will be calculated and hence this r will
 % be the same at which D1 & D2 will be calculated===>r2
 % r_samp is nothing but the r in number of samples==>r2

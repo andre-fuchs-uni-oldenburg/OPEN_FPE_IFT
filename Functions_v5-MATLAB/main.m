@@ -15,6 +15,9 @@ clear fig
 
 pre_analysis       = askYesno('Would you like to load a pre-analysis?', 'No');
 
+% answer = 'PART I: Standard turbulence analysis';
+% pre_analysis       = 0;
+
 switch answer
     case 'PART I: Standard turbulence analysis'
         [data,ikx,bar,tmp_bar,save_path,save_name,Fs,m_data,kin_vis,increment_bin,f, E_f_no_filter, f_avg_no_filter, E_avg_no_filter, P_avg_no_filter,filter,...

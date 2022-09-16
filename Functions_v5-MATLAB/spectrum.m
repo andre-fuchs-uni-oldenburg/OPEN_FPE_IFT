@@ -7,6 +7,8 @@
 %
 % Arguments IN
 % data = 1D array for which you would like to plot power spectram density(PSD)
+% Fs= Sampling frequency in Hz
+% increment_bin = The number of bins in which you would like to divide your data
 % 
 % Arguments OUT
 % f = Frequency without smoothing

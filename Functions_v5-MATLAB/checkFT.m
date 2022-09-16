@@ -30,6 +30,8 @@
 % markov = markov length in number of samples
 % trajec = 1 ==> The start/end of the cascade trajectory will be adjusted.
 % dr_ind = Separation of scales/step increment (in samples) referred to the sequence from large to small scales in the cascade trajectory
+% norm_ur = normalization of the data using $\sigma_\infty$? data 1=Yes, 0=No
+% norm_r = normalization of the scale using $\lambda$? data 1=Yes, 0=No
 % 
 % Arguments OUT
 % Sm = Entropy of the medium

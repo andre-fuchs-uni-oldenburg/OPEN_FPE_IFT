@@ -15,16 +15,16 @@
 % Fs = Acquisition/Sampling Frequency in Hz
 % low_freq = Frequency at which you would like to use the low-pass filter in Hz
 % kin_vis = Kinematic viscosity of fluid in m^2/sec
-% C2 = Kolmogorov constant, C2 associated with second order structure function(in between 2.0 to 2.2)
+% C2 = constant, C2 associated with second order structure function(in between 2.0 to 2.2)
 %
 % Arguments OUT
 % int_L = Integral length scale in meters
 % taylor_L = Taylors length scale in meters
-% diss_scale = Kolmogorv lenght scale in meters
 % int_L_calc = 1D array of integral length scale calculated by different methods/formula
 % taylor_L_calc = 1D array of Taylor's length scale calculated by different methods/formula
 % epsi = mean energy dissipation rate
 % epsi_calc = 1D array of mean energy dissipation rate calculated by different methods/formula
+% diss_scale = Kolmogorv lenght scale in meters
 % Ce = is the non-dimentional / normalized energy dissipation rate
 % Ce_calc = 1D array of Ce calculated by different methods/formula
 % Re = Reynolds Number  based on integral length scale

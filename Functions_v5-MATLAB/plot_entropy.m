@@ -12,6 +12,9 @@
 % Sm = Entropy of the medium
 % Ds = Entropy of the system or the Shanon entropy
 % DS = Total entropy production=Sm+Ds
+% increment_bin = number of bins
+% save_path = path for saving figures and files
+% save_name = name for saving files
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function plot_entropy(Sm,Ds,DS,increment_bin,save_path,save_name)

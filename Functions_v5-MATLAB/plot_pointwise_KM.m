@@ -6,6 +6,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function plot_pointwise_KM(y,x,y_mean_bin,x_mean_bin,x_bin_not_nan,x0,x1,P_B,P_AnB,P_AIB,counter_A,counter_B,min_events,eD1,eD2,markov,fval_start,fval,tau1,tau2,m_data,Fs,taylor_L,tol,dy,increment_bin,ub,lb,norm_ur,norm_r,save_path,save_name)
+set(groot, 'defaultAxesTickLabelInterpreter','latex'); 
+set(groot, 'defaulttextinterpreter','latex');   
+set(groot, 'defaultLegendInterpreter','latex');
+set(groot, 'defaultAxesTitle','latex');
+
+
 y_input     = y_mean_bin(counter_B>=min_events);
 x_input     = x_mean_bin(counter_A>=min_events);
 
@@ -351,7 +357,7 @@ xlabel(['$u_{r=' num2str(tau2/markov,'%1.1f') '\Delta_{EM}}$'], 'interpreter','l
 ylabel(['$u_{r''=' num2str(tau1/markov,'%1.1f') '\Delta_{EM}}$'], 'interpreter','latex')
 end   
 fig_setup
-title(['$\xi$=' num2str(fval_start,2) '; ' '$\xi_{opti}$=' num2str(fval,2)])
+title(['$\xi_{stp}$=' num2str(fval_start,2) '; ' '$\xi_{stp,opti}$=' num2str(fval,2)])
 xPos = 0.0;
 yPos = 0.0;
 plot([xPos xPos], get(gca,'ylim'),'LineWidth',2,'LineStyle','--','Color','k'); % Adapts to y limits of current axes
@@ -388,7 +394,7 @@ set(gca,'FontSize',18)
 % axis([-5 5 -5 5])
 axis square
 set(gcf, 'Color', 'w')
-title(['$\xi$=' num2str(fval_start,2) '; ' '$\xi_{opti}$=' num2str(fval,2)])
+title(['$\xi_{stp}$=' num2str(fval_start,2) '; ' '$\xi_{stp,opti}$=' num2str(fval,2)])
 xPos = 0.0;
 yPos = 0.0;
 %vertical cut
@@ -436,7 +442,7 @@ axis square
 set(gcf, 'Color', 'w')
 % legend('experiment','optimized','Location','NorthWest')
 legend('$p_{exp}$','$p_{stp,opti}$','Location','NorthWest','Position',[0.281785714285714 0.657642855417161 0.165338666098458 0.113571428117298])
-title(['$\xi$=' num2str(fval_start,2) '; ' '$\xi_{opti}$=' num2str(fval,2)])
+title(['$\xi_{stp}$=' num2str(fval_start,2) '; ' '$\xi_{stp,opti}$=' num2str(fval,2)])
 % title(['directly=' num2str(fval_start,2) '; ' 'optimized=' num2str(fval,2)])
 grid off
 % xlabel(['$u_{r_2=' num2str(tau2/markov,'%1.1f') '\Delta_{EM}}/ \sigma_\infty$'], 'interpreter','latex')

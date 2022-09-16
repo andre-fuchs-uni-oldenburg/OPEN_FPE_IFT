@@ -2,7 +2,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % This function plots the probability density function (PDF) of the velocity increments 
 % at the scale $r=L$, $r=\lambda$ and  $r=\eta$. The colored dashed line correspond to Castaing fits 
-% (form factor $\lambda^2$ \cite{Castaing_1990}) and grey dashed line to Gaussian fits.
+% (form factor $\Lambda_r$ \cite{Castaing_1990}) and grey dashed line to Gaussian fits.
 %
 % Arguments IN
 % data = 1D array of data to which you would like to apply the low pass filter
@@ -122,7 +122,7 @@ if nargin >= 8
     norm1 = pdf(fitdist(incr3,'Normal'),uL);
     plot(uL,norm1,'LineWidth',2,'LineStyle','--','Color',[0.501960813999176 0.501960813999176 0.501960813999176])
     legend({'$u_L$','$u_\lambda$','$u_\eta$'},'Interpreter','latex','Location','northeast','FontSize',18)  
-    legend('$u_L$','$u_\lambda$','$u_\eta$',['Cast. $\lambda^2=$',num2str(Lam_sq_L,'%1.2f')],['Cast. $\lambda^2=$',num2str(Lam_sq_l,'%1.2f')],['Cast. $\lambda^2=$',num2str(Lam_sq_e,'%1.2f')],'Gaussian fit','FontSize',18);
+    legend('$u_L$','$u_\lambda$','$u_\eta$',['Cast. $\Lambda_r=$',num2str(Lam_sq_L,'%1.2f')],['Cast. $\Lambda_r=$',num2str(Lam_sq_l,'%1.2f')],['Cast. $\Lambda_r=$',num2str(Lam_sq_e,'%1.2f')],'Gaussian fit','FontSize',18);
     ylim([0.000001*max(puL) 2*max(pue)])
     title(['$S(u_L)$ = ',num2str(skewness(incr1),'%1.2f'), ';',...
           ' $S(u_\lambda)$ = ',num2str(skewness(incr2),'%1.2f'), ';',...
@@ -172,8 +172,8 @@ else
     norm1 = pdf(fitdist(incr2,'Normal'),uL);
     plot(uL,norm1,'LineWidth',2,'LineStyle','--','Color',[0.501960813999176 0.501960813999176 0.501960813999176])
 %     legend({'$u_L$','$u_\lambda$'},'Interpreter','latex','Location','northeast','FontSize',18)
-    legend('$u_L$','$u_\lambda$',['Cast. $\lambda^2=$',num2str(Lam_sq_L,'%1.2f')],['Cast. $\lambda^2=$',num2str(Lam_sq_l,'%1.2f')]);
-    
+    legend('$u_L$','$u_\lambda$',['Cast. $\Lambda_r=$',num2str(Lam_sq_L,'%1.2f')],['Cast. $\Lambda_r=$',num2str(Lam_sq_l,'%1.2f')]);
+
     title(['$S(u_L)$ = ',num2str(skewness(incr1),'%1.2f'), ';',...
           ' $S(u_\lambda)$ = ',num2str(skewness(incr2),'%1.2f'), ';',...
     ],'interpreter','latex')

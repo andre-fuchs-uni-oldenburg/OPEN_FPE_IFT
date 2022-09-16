@@ -14,6 +14,8 @@
 % Fs = Acquisition/Sampling Frequency in Hz
 % int_L = Integral length scale in meters
 % taylor_L = Taylors length scale in meters
+% save_path = path for saving figures and files
+% save_name = name for saving files
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function Struc_flip_test(Fs,data,int_L,taylor_L,save_path,save_name)

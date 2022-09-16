@@ -11,6 +11,10 @@
 % taylor_L = Taylor length scale in meters
 % multi_point = Multipoint condition 1=YES or 2=NO
 % condition = This input is for multipoint statistics
+% norm_ur = normalization of the data using $\sigma_\infty$? data 1=Yes, 0=No
+% norm_r = normalization of the scale using $\lambda$? data 1=Yes, 0=No
+% save_path = path for saving figures and files
+% save_name = name for saving files
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function KM_plot(co,evaluated,Fs,taylor_L,int_L,multi_point,condition,norm_ur,norm_r,save_path,save_name,varargin)

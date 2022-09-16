@@ -21,6 +21,9 @@
 % second_condi = increment of the second condition
 % num_bin = Number of bins 
 % min_events = minimum number of events to consider in a single bin
+% norm_ur = normalization of the scale using $\lambda$? data 1=Yes, 0=No
+% save_path = path for saving figures and files
+% save_name = name for saving files
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function conditional_PDF_markov(data,Fs,m_data,markov,second_condi,num_bin,min_events,norm_ur,save_path,save_name)
@@ -84,12 +87,15 @@ tol                     = 0.1;
 %% single conditional probability
 [P_AIB,P_BIA,P_AnB,P_A,P_B,binP_AIB,x_mean_bin,y_mean_bin,events_1,counter_A,counter_B] = distribution(tau2,tau1,incr1,incr2,num_bin,dx,dy,x,y,dA);
 
+P_AIB_div	= P_AIB;
+P_AIB_div(counter_A<min_events,counter_B<min_events)=0;
+
 %cut out nan's and min_events
 y_input     = y_mean_bin(counter_B>=min_events);
 x_input     = x_mean_bin(counter_A>=min_events);
 
-P_AIB       = P_AIB(counter_A>=min_events,counter_B>=min_events);
-P_AnB       = P_AnB(counter_A>=min_events,counter_B>=min_events);
+P_AIB      = P_AIB(counter_A>=min_events,counter_B>=min_events);
+P_AnB     = P_AnB(counter_A>=min_events,counter_B>=min_events);
 P_A         = P_A(counter_A>=min_events);
 P_B         = P_B(counter_B>=min_events);
                          
@@ -121,6 +127,8 @@ hold on
 % cut for the second conditon (incr3) 
 index = find(incr3>-tol+second_condi & incr3<tol+second_condi);
 [P_AIB_2,P_BIA_2,P_AnB_2,P_A_2,P_B_2,binP_AIB_2,x_mean_bin_2,y_mean_bin_2,events_2,counter_A_2,counter_B_2] = distribution_double(tau2,tau1,incr1(index),incr2(index),num_bin,dx,dy,x,y,dA);   
+P_AIB_div_2=P_AIB_2;
+P_AIB_div_2(counter_A_2<min_events,counter_B_2<min_events)=0;
 
 % cut out nan's and min_events
 y_input_2=y_mean_bin_2(counter_B_2>=min_events);
@@ -147,6 +155,31 @@ plot([y_input(cut_0) y_input(cut_0)], get(gca,'ylim'),'LineWidth',2,'LineStyle',
 plot([y_input(cut_b) y_input(cut_b)], get(gca,'ylim'),'LineWidth',2,'LineStyle','--','Color','k'); % Adapts to y limits of current axes
 
 legend({'$p(u_{r_2}|u_{r_1})$','$p(u_{r_2}|u_{r_1},u_{r_0})$'}, 'interpreter','latex','Location','northwest')
+
+
+
+
+% Titel hier einfügen
+%% weighted mean square error function in logarithmic space; conditional probability densities
+d_M_1   = 0;
+d_M_2   = 0;
+for j =1:num_bin
+    for i =1:num_bin
+         if (P_AIB_div_2(i,j) > 0) && (P_AIB_div(i,j) > 0)     
+            d_M_1 = d_M_1 + ((P_AIB_div_2(i,j) + P_AIB_div(i,j)).*...
+                            (log(P_AIB_div_2(i,j))    - log(P_AIB_div(i,j))).^2);                        
+            d_M_2 = d_M_2 + ((P_AIB_div_2(i,j) + P_AIB_div(i,j)).*...
+                            (log(P_AIB_div_2(i,j)).^2 + log(P_AIB_div(i,j)).^2));
+        end
+%         if (P_verbund_n(i,j) < 0)
+%             d_M_1 = d_M_1 + 10.^(10);                        
+%         end
+    end
+end
+fval     = d_M_1/d_M_2;
+
+title(['$\xi_{\Delta_{EM}}$=' num2str(fval,2)])
+
 
 fig_setup
 txt = {'(a)'};

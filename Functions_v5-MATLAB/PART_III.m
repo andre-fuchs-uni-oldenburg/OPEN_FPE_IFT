@@ -51,11 +51,12 @@ end
 
 %% Optimization of Kramers-Moyal coefficients Fit: IFT opti
 close all
-opti_IFT    = askYesno('Do you want to perform the pointwise optimization of Kramers-Moyal coefficients towards the integral fluctuation theorem?', 'Yes');
+opti_IFT    = askYesno('Do you want to perform the pointwise optimization of Kramers-Moyal coefficients relatively to the integral fluctuation theorem?', 'Yes');
 if opti_IFT==1
     bar = waitbar(20/ikx,'Optimization of Kramers-Moyal coefficients: IFT','Position', tmp_bar);
 %     z               = 3;
-    dr_ind          = 1;
+%     dr_ind          = 1;
+	dr_ind          = askInput({sprintf('Enter the separation of scales/step increment (in samples) referred to the sequence from large to small scales in the cascade trajectory:')},{num2str(1)});
     iter            = askInput({sprintf('Enter the maximum number of iteration used for the optimization algorithms:')}, {'5'});
     tol_D1          = askInput({sprintf('Optimization: Tolerance of the range of Kramers-Moyal coefficients in %%')}, {'10'})/100;
     tol_D2          = tol_D1;

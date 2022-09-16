@@ -16,6 +16,9 @@
 % increment_bin = number of bins
 % condition = This input is for multipoint statistics
 % tol = This input is for multipoint statistics
+% data_filter = filtered data 
+% save_path = path for saving figures and files
+% save_name = name for saving files
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function plot_conditional_moment(scal,bin_num,evaluated,step_con_moment,markov,multi_point,increment_bin,condition,tol,data,save_path,save_name)
@@ -81,12 +84,12 @@ for jj=length(step_con_moment_tmp):-1:1
 end
 
 h(1) = figure;
-plot(step_con_moment,evaluated(scal).M11(bin_num,:),'Color',[0.00,0.45,0.74],'MarkerSize',6,'Marker','o', 'LineStyle','none','LineWidth',1.5)
+plot(step_con_moment,evaluated(scal).M11(bin_num,:),'Color',[0.00,0.45,0.74],'MarkerSize',8,'Marker','o', 'LineStyle','none','LineWidth',2)
 hold
-plot(step_con_moment,evaluated(scal).M21(bin_num,:),'Color',[0.85,0.33,0.10],'MarkerSize',6,'Marker','o', 'LineStyle','none','LineWidth',1.5)
- 
-plot(step_con_moment_tmp,M11(bin_num,:),'k','MarkerSize',6,'Marker','o', 'LineStyle','none','LineWidth',1.5)
-plot(step_con_moment_tmp,M21(bin_num,:),'k','MarkerSize',6,'Marker','o', 'LineStyle','none','LineWidth',1.5)
+plot(step_con_moment,evaluated(scal).M21(bin_num,:),'Color',[0.85,0.33,0.10],'MarkerSize',8,'Marker','+', 'LineStyle','none','LineWidth',2)
+
+plot(step_con_moment_tmp,M11(bin_num,:),'k','MarkerSize',8,'Marker','o', 'LineStyle','none','LineWidth',1.5)
+plot(step_con_moment_tmp,M21(bin_num,:),'k','MarkerSize',8,'Marker','+', 'LineStyle','none','LineWidth',1.5)
 
 xlabel('$\Delta r/sample$','Interpreter','latex')
 % ylabel('Conditional Moment')
@@ -102,19 +105,16 @@ ylim([min([M11(bin_num,:) M21(bin_num,:)]) max([M11(bin_num,:) M21(bin_num,:)])]
 ft = fittype( 'poly1' );
 opts = fitoptions( 'Method', 'LinearLeastSquares' );
 [fitresult, gof]        = fit( xData, yData, ft, opts );
-plot(linspace(0,2*max(step_con_moment_tmp),100),feval(fitresult,linspace(0,2*max(step_con_moment_tmp),100)),'k','LineWidth',2,'LineStyle','-')
+plot(linspace(0,2*max(step_con_moment_tmp),100),feval(fitresult,linspace(0,2*max(step_con_moment_tmp),100)),'k','LineWidth',1.5,'LineStyle','-')
 
 [xData, yData] = prepareCurveData( step_con_moment,evaluated(scal).M21(bin_num,:));
 ft = fittype( 'poly1' );
 opts = fitoptions( 'Method', 'LinearLeastSquares' );
 [fitresult, gof]        = fit( xData, yData, ft, opts );
-plot(linspace(0,2*max(step_con_moment_tmp),100),feval(fitresult,linspace(0,2*max(step_con_moment_tmp),100)),'k','LineWidth',2,'LineStyle','-')
+plot(linspace(0,2*max(step_con_moment_tmp),100),feval(fitresult,linspace(0,2*max(step_con_moment_tmp),100)),'k','LineWidth',1.5,'LineStyle','-')
 
 vline(min(step_con_moment),'k')
 vline(max(step_con_moment),'k')
-
-plot(step_con_moment,evaluated(scal).M11(bin_num,:),'Color',[0.00,0.45,0.74],'MarkerSize',10,'Marker','o', 'LineStyle','none','LineWidth',1.5)
-plot(step_con_moment,evaluated(scal).M21(bin_num,:),'Color',[0.85,0.33,0.10],'MarkerSize',10,'Marker','o', 'LineStyle','none','LineWidth',1.5)
 
 legend('$M^{(1)}\left(u_r,r\right)$ ','$M^{(2)}\left(u_r,r\right)$ ','Location','northwest')
 

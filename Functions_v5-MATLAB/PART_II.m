@@ -66,7 +66,7 @@ end
 %% Plot conditional moments
 plot_moment     = askYesno('Do you want to plot conditional moments?', 'Yes');
 if plot_moment==1
-    plot_conditional_moment(askInput({sprintf('Plot: number of Scale:')}, {num2str(scale_steps)}),askInput({sprintf('Plot: number of a bin (value of the velocity increment u_r):')}, {num2str(ceil(increment_bin/2))}),evaluated,step_con_moment,markov,multi_point,increment_bin,condition,tol,data_filter,save_path,save_name)
+    plot_conditional_moment(askInput({sprintf('Plot: number of Scale:')}, {num2str(scale_steps)}),askInput({sprintf('Plot: number of a bin (value of the velocity increment u_r):')}, {num2str(ceil(increment_bin/2))}),evaluated,step_con_moment,markov,multi_point,increment_bin,condition,tol,data_filter,save_path,save_name);
 end
 waitbar(13/ikx,bar,'Calculation of Kramers-Moyal coefficients');
 

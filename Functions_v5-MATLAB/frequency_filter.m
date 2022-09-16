@@ -16,8 +16,9 @@
 % Arguments OUT
 % tmps = this is the filtered data which will be returned by this function
 % x_achse_k_spektrum_2pi_filter = 2 pi k waven umbers(1/m) after filtering
+% spek_smooth_filter = Frequency Spectrum after filtering
 % E_k = Wavenumber Spectrum (m^3/sec^2) after filtering
-% x_achse_spektrum_meter_filter = k Spektrum; Scales,r (m) 
+% x_achse_spektrum_meter_filter = r Spektrum; Scales,r (m)  
 % Dr_avg_filter = Dissipation Spectrum; scale domain; after filtering
 % Dk_avg_filter = Dissipation Spectrum; wave number domain; after filtering
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -152,7 +153,7 @@ axis square
 % vline(m_data/taylor_L,'k')
 set(groot, 'defaultAxesTickLabelInterpreter','latex');
 % title(['$ti=$',num2str(std(data)/m_data,'%1.3f')],'interpreter','latex') %% Turbulence Intensity of the flow
-legend('raw','averaged','low-pass filtered','Location','southwest')
+legend('raw','averaged','averaged \& low-pass filtered','Location','southwest')
 set(gca,'XTick',[10^-4 10^-2 10^0  10^2  10^4]);
 
 
@@ -168,7 +169,7 @@ opts = fitoptions( 'Method', 'NonlinearLeastSquares' );
 [fitresult, gof] = fit( xData, yData, ft, opts );
 
 plot(f_plot,feval(fitresult,f_plot),'Color',[0 0 0],'LineWidth',2,'LineStyle','--')
-legend('raw','averaged','low-pass filtered','$f^{(-5/3)}$')
+legend('raw','averaged','averaged \& low-pass filtered','$f^{(-5/3)}$','Location','southwest')
 ylim([min(spek_plot) max(spek_plot)]*4)
 
 tmp_ui=uicontrol('Position',[10 10 100 40],'String','Continue','Callback','uiresume(gcbf)');

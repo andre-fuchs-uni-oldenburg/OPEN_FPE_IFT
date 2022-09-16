@@ -95,7 +95,7 @@ end
 %% Estimation of fundamental length scales
 lenght_scales     = askYesno('Do you want to estimate the fundamental length scales?', 'Yes');
 if lenght_scales==1
-    C2 = askInput({sprintf('Enter the value of Kolmogorov constant, C_2 associated with second order structure function(in between 2.0 to 2.2)')}, {'2.1'});
+    C2 = askInput({sprintf('Enter the value of constant, C_2 associated with second order structure function:')}, {'2.0'});
     [int_L,taylor_L,int_L_calc, taylor_L_calc,epsi,epsi_calc,diss_scale,Ce, Ce_calc, Re, Re_lambda ] = length_scales(data_filter,Fs,low_freq,kin_vis,C2,increment_bin,m_data,save_path,save_name);
 else
     int_L       = str2double(inputdlg({'Enter the integral length scale in meter:'}));
@@ -117,7 +117,7 @@ end
 
 %% Wether to flip the Hot-wire data or not?
 flip_data       = askYesno('Do you want to check if you have to flip the data?', 'Yes');
-norm_ur         = askYesno('Do you want to perform the normalization of the data using $\sigma_\infty$?', 'Yes');
+norm_ur        = askYesno('Do you want to perform the normalization of the data using $\sigma_\infty$?', 'Yes');
 norm_r          = askYesno('Do you want to perform the normalization of the scale using $\lambda$?', 'Yes');
 if flip_data==1
     Struc_flip_test(Fs,data_filter,int_L,taylor_L,save_path,save_name)

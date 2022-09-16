@@ -25,6 +25,7 @@
 % Arguments OUT
 % evaluated = struct array containing all the information about conditional moments for each scale and for each bin
 % step_con_moment = the steps at which the value of conditional moments are calculated
+% Enclosed in a "evaluated":
 % r is the scale in meters at which moments will be calculated and hence this r will
 % be the same at which D1 & D2 will be calculated===>r2
 % r_samp is the r in number of samples==>r2

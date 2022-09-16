@@ -17,6 +17,10 @@
 % markov = markov length in number of samples
 % multi_point = weather to do multi-point analysis or not 1=Yes, 0=No
 % condition = condition for multi-point analysis
+% norm_ur = normalization of the data using $\sigma_\infty$? data 1=Yes, 0=No
+% norm_r = normalization of the scale using $\lambda$? data 1=Yes, 0=No
+% save_path = path for saving figures and files
+% save_name = name for saving files
 %
 % Arguments OUT
 % co_KM_opti = Coefficients $d_{ij}(r)$ of the optimized Kramers-Moyal coefficients using the surface fits

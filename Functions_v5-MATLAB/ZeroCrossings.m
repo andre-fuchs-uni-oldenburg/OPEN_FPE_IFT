@@ -228,7 +228,8 @@ function [EpsNew,h]=PostProcEps(data,m_data,Fs,nu,x_achse_k_spektrum_2pi,E_k,h)
 %             EpsNew  = trapz(x_achse_k_spektrum_2pi(1:ind_2),y_tmp(1:ind_2));
 %         else   
 %             [xData, yData] = prepareCurveData( x_achse_k_spektrum_2pi(ind_1:ind_2), y_tmp(ind_1:ind_2));
-            EpsNew = trapz(x_achse_k_spektrum_2pi(1:ind_1),y_tmp(1:ind_1))+trapz(xData,feval(fitresult,xData));
+%             EpsNew = trapz(x_achse_k_spektrum_2pi(1:ind_1),y_tmp(1:ind_1))+trapz(xData,feval(fitresult,xData));
+			EpsNew = trapz(x_achse_k_spektrum_2pi(1:ind_1),y_tmp(1:ind_1))+trapz(x_achse_k_spektrum_2pi(ind_1:end),feval(fitresult,x_achse_k_spektrum_2pi(ind_1:end)));
             % not more than 5% should be modeld  
 %             p(1).*ind_1.^(p(3)+1)/(p(3)+1);
 %         end

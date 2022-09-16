@@ -36,6 +36,10 @@
 % markov = markov length in number of samples
 % trajec = 1 ==> The start/end of the cascade trajectory will be adjusted.
 % dr_ind = Separation of scales/step increment (in samples) referred to the sequence from large to small scales in the cascade trajectory
+% norm_ur = normalization of the data using $\sigma_\infty$? data 1=Yes, 0=No
+% norm_r = normalization of the scale using $\lambda$? data 1=Yes, 0=No
+% save_path = path for saving figures and files
+% save_name = name for saving files
 % 
 % Arguments OUT
 % co_IFT_opti = Coefficients $d_{ij}(r)$ of the optimized Kramers-Moyal coefficients towards the 
