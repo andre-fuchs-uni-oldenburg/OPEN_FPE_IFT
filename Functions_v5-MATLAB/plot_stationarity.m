@@ -71,6 +71,7 @@ k_split    = 100/percent;
 
 if numel(data)<k_split
     k_split=numel(data);
+    percent=100/numel(data); % need to add this line
 end
     
 tmp        = reshape(data((1: floor(numel(data)/k_split)*k_split)),[],k_split);
