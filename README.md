@@ -2,7 +2,7 @@
 This is a user-friendly open-source MATLAB package developed by the research group Turbulence, Wind energy and Stochastics (TWiSt) at the Carl von Ossietzky University of Oldenburg (https://uol.de/en/physics/twist). This package enables to perform a standard analysis of given turbulent data and extracts the stochastic equations describing the scale-dependent cascade process in turbulent flows through Fokker-Planck equations. As the analysis of the scale-dependent cascade process through a hierarchy of spatial and temporal scales in turbulent flows is an integral part of turbulence theory, this interdisciplinary treatment of the turbulent cascade process has the potential for a new way to link the statistical description of turbulence (via common two-point increment statistics), non-equilibrium stochastic thermodynamics and local turbulent flow structures. The presented package can be used also for the analysis of other data with turbulent like complexity.
 
 ## README file on OPEN_FPE_IFT:
-A detailed description of the individual functions can be found on arXiv: https://arxiv.org/abs/2106.13042
+A detailed description of the individual functions can be found on Physics of Fluids (2022); https://doi.org/10.1063/5.0107974
 
 ## Standalone application (no MATLAB license needed) 
 To enhance the accessibility, standalone applications (64- bit) for Windows, macOS and Linux are also created to run the MATLAB code on target machines that do not have a MATLAB license. When running the standalone applications, MATLAB Runtime 2020a is installed automatically. If a problem occurs during the installation of MATLAB Runtime 2020a, see: https://www.mathworks.com/help/compiler/install-the-matlab-runtime.html
